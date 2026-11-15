@@ -208,8 +208,6 @@ export const projects: ProjectData[] = [
       "Menerapkan pemisahan data usaha melalui konsep multi-tenancy.",
     ],
 
-
-
     //hero image
     heroImage: "/public/saktiku/dashboard.png",
     heroImageAlt: "Logo Saktiku",
