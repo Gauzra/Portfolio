@@ -1,0 +1,52 @@
+/* =========================================
+   SCROLL REVEAL
+   Content stays visible by default. The hook
+   only adds the pending state after it has a
+   working IntersectionObserver.
+========================================= */
+
+[data-reveal] {
+  --reveal-duration: 560ms;
+  --reveal-easing: cubic-bezier(0.22, 1, 0.36, 1);
+  --reveal-delay: 0ms;
+  --reveal-offset: 18px;
+}
+
+[data-reveal].reveal-pending {
+  opacity: 0;
+  transition:
+    opacity var(--reveal-duration) var(--reveal-easing) var(--reveal-delay),
+    translate var(--reveal-duration) var(--reveal-easing) var(--reveal-delay),
+    scale var(--reveal-duration) var(--reveal-easing) var(--reveal-delay);
+  will-change: opacity, translate, scale;
+}
+
+[data-reveal="fade-up"].reveal-pending {
+  translate: 0 var(--reveal-offset);
+}
+
+[data-reveal="card"].reveal-pending {
+  translate: 0 var(--reveal-offset);
+  scale: 0.98;
+}
+
+[data-reveal="scale"].reveal-pending {
+  --reveal-duration: 550ms;
+  scale: 0.98;
+}
+
+[data-reveal].reveal-pending.is-revealed {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal].reveal-pending {
+    opacity: 1;
+    translate: none;
+    scale: none;
+    transition: none;
+    will-change: auto;
+  }
+}

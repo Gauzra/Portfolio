@@ -1,0 +1,201 @@
+/* =========================================
+   PROJECT 3D COVERFLOW
+========================================= */
+
+.project-coverflow {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.project-coverflow-stage {
+    position: relative;
+    width: 100%;
+    height: clamp(390px, 28vw, 430px);
+    perspective: 1200px;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: grab;
+}
+
+.project-coverflow-stage.is-dragging {
+    cursor: grabbing;
+}
+
+/* When actively dragging, disable transitions for 1:1 real-time cursor tracking */
+.project-coverflow-stage.is-dragging .project-coverflow-item {
+    transition: none !important;
+}
+
+.project-coverflow-item {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: min(32%, 340px);
+    height: 100%;
+    transform-origin: center center;
+    transition:
+        transform 550ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 400ms ease,
+        filter 400ms ease;
+    will-change: transform, opacity;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.project-coverflow-item.is-active {
+    z-index: 30;
+    opacity: 1;
+    filter: none;
+    cursor: pointer;
+}
+
+.project-coverflow-item.is-active .project-card {
+    border-color: rgba(255, 180, 95, 0.45);
+    box-shadow:
+        0 28px 75px rgba(0, 0, 0, 0.6),
+        0 0 35px rgba(255, 180, 95, 0.1);
+}
+
+.project-coverflow-item.is-side {
+    z-index: 10;
+    filter: brightness(0.65);
+    cursor: pointer;
+}
+
+.project-coverflow-item.is-side .project-card {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.project-coverflow-item.is-side:hover {
+    filter: brightness(0.82);
+}
+
+.project-coverflow-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 14px;
+}
+
+.project-coverflow-arrow {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 180, 95, 0.3);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.025);
+    color: #ffb45f;
+    font-size: 18px;
+    cursor: pointer;
+    transition:
+        background 200ms ease,
+        color 200ms ease,
+        border-color 200ms ease,
+        transform 200ms ease;
+}
+
+.project-coverflow-arrow:hover:not(:disabled) {
+    background: #ffb45f;
+    border-color: #ffb45f;
+    color: #080c13;
+    transform: scale(1.08);
+}
+
+.project-coverflow-arrow:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.project-coverflow-pagination {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    font-family: "Jockey One", sans-serif;
+}
+
+.project-coverflow-pagination .current {
+    color: #ffb45f;
+    font-size: 24px;
+}
+
+.project-coverflow-pagination .separator,
+.project-coverflow-pagination .total {
+    color: #777f8d;
+    font-size: 15px;
+}
+
+.project-coverflow-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.project-coverflow-dot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition:
+        width 250ms ease,
+        background 250ms ease;
+}
+
+.project-coverflow-dot.is-active {
+    width: 22px;
+    background: #ffb45f;
+}
+
+/* Tablet */
+
+@media (max-width: 880px) {
+    .project-coverflow-stage {
+        height: clamp(410px, 45vw, 460px);
+    }
+
+    .project-coverflow-item {
+        width: min(72%, 390px);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .project-coverflow-stage {
+        height: clamp(380px, 88vw, 430px);
+        perspective: 1000px;
+    }
+
+    .project-coverflow-item {
+        width: min(84%, 330px);
+    }
+
+    .project-coverflow-navigation {
+        margin-top: 12px;
+        gap: 16px;
+    }
+
+    .project-coverflow-arrow {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-coverflow-item,
+    .project-coverflow-arrow,
+    .project-coverflow-dot {
+        transition: none;
+    }
+}

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- figma:head-start -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080c13" />
+  <title>Portfolio</title>
+  <!-- figma:head-end -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet" />
+
+  <script>
+    try {
+      if (window.location.pathname.startsWith("/projects")) {
+        document.documentElement.classList.add("no-opening");
+      }
+    } catch (e) { }
+  </script>
+
+  <style>
+    .no-opening #initial-opening {
+      display: none !important;
+    }
+
+    #initial-opening {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 50% 48%,
+          rgba(255, 148, 31, 0.20) 0%,
+          rgba(255, 148, 31, 0.09) 25%,
+          transparent 55%),
+        #080c13;
+      opacity: 1;
+      visibility: visible;
+      transition:
+        opacity 520ms cubic-bezier(0.65, 0, 0.35, 1),
+        visibility 520ms;
+    }
+
+    #initial-opening.is-leaving {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    #initial-opening .initial-opening-word {
+      max-width: 100%;
+      margin: 0;
+      padding: 0 5vw;
+      color: #f4f5f7;
+      font-family: "Rajdhani", sans-serif;
+      font-size: clamp(3rem, 9vw, 7rem);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      line-height: 1.05;
+      text-align: center;
+      text-wrap: balance;
+
+      opacity: 0;
+      visibility: hidden;
+      filter: blur(5px);
+      transform: translateY(8px);
+    }
+
+    #initial-opening.font-ready .initial-opening-word {
+      visibility: visible;
+      animation: initial-welcome-in 1.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes initial-welcome-in {
+      from {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      #initial-opening .initial-opening-word {
+        font-size: clamp(2.4rem, 10vw, 4rem);
+        letter-spacing: 0.05em;
+        line-height: 1.1;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      #initial-opening,
+      #initial-opening.is-leaving {
+        transition: none;
+      }
+
+      #initial-opening .initial-opening-word {
+        filter: none;
+        transform: none;
+        animation: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- figma:body-start -->
+  <div id="initial-opening" aria-label="Welcome">
+    <p class="initial-opening-word">PORTFOLIO</p>
+  </div>
+  <script>
+    if (document.documentElement.classList.contains("no-opening")) {
+      document.getElementById("initial-opening")?.remove();
+    }
+  </script>
+
+  <div id="root"></div>
+
+  <script type="module" src="/src/main.tsx"></script>
+  <!-- figma:body-end -->
+</body>
+
+</html>

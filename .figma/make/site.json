@@ -1,0 +1,10 @@
+{
+  "description": "A polished portfolio landing page for a full-stack web developer to showcase their expertise, portrait, social links, and project and contact calls to action.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

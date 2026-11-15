@@ -1,0 +1,114 @@
+.project-showcase {
+    position: relative;
+    padding: clamp(24px, 3vw, 36px) 0;
+    overflow: hidden;
+    isolation: isolate;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    scroll-margin-top: 80px;
+}
+
+.section-watermark.projects-watermark {
+    top: 12px;
+}
+
+.project-showcase::before {
+    position: absolute;
+    z-index: -1;
+    top: 8%;
+    left: 50%;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(255, 148, 31, 0.055),
+            transparent 68%);
+    content: "";
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+.project-showcase-content {
+    width: min(100% - 48px, 1200px);
+    margin: 0 auto;
+}
+
+.project-showcase-heading {
+    max-width: 600px;
+    margin: 0 auto 14px;
+    text-align: center;
+}
+
+.project-showcase-eyebrow {
+    color: var(--orange-light);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+}
+
+.project-showcase-heading h2 {
+    margin: 3px 0 5px;
+    color: #f4f5f7;
+    font-family: "Jockey One", sans-serif;
+    font-size: clamp(1.85rem, 2.8vw, 2.4rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.project-showcase-heading h2 em {
+    color: var(--orange-light);
+    font-style: normal;
+}
+
+.project-showcase-heading p {
+    max-width: 480px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* TABLET */
+
+@media (max-width: 880px) {
+    .project-showcase {
+        padding: 36px 0;
+    }
+
+    .project-showcase-content {
+        width: calc(100% - 40px);
+    }
+
+    .project-showcase-heading {
+        margin-bottom: 18px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .project-showcase {
+        padding: 30px 0;
+    }
+
+    .project-showcase-content {
+        width: calc(100% - 32px);
+    }
+
+    .project-showcase-heading {
+        margin-bottom: 14px;
+    }
+
+    .project-showcase-heading h2 {
+        font-size: clamp(2.4rem, 9vw, 3rem);
+    }
+
+    .project-showcase-heading p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 390px) {
+    .project-showcase-content {
+        width: calc(100% - 28px);
+    }
+}

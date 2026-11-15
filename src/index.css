@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Jockey+One&display=swap');
+@import 'tailwindcss';
+@import './styles/scroll-reveal.css';
+
+:root {
+  color: #f4f5f7;
+  background: #080c13;
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  --orange: #fffdfc;
+  --orange-light: #ffb45f;
+  --navy: #080c13;
+  --muted: #9199a8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 76% 54%, rgba(255, 148, 31, 0.065), transparent 28rem),
+    #080c13;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,22 @@
+.section-watermark {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -12px;
+    color: rgba(255, 255, 255, 0.035);
+    font-family: "Jockey One", sans-serif;
+    font-size: clamp(7rem, 18vw, 15rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 1;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (max-width: 680px) {
+    .section-watermark {
+        left: -5px;
+        font-size: 5.5rem;
+    }
+}
