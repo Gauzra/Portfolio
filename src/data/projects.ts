@@ -62,7 +62,7 @@ export const projects: ProjectData[] = [
     description:
       "Sistem terintegrasi untuk mengelola keuangan, penjualan, dan persediaan UMKM.",
 
-    image: "/public/keutrack/cover.png",
+    image: `${import.meta.env.BASE_URL}keutrack/cover.png`,
     imageAlt: "Cover platform KeuTrack",
 
     technologies: ["React", "Vite", "Node.js", "Express", "MySQL"],
@@ -108,44 +108,44 @@ export const projects: ProjectData[] = [
     database: {
       description:
         "Database KeuTrack dirancang dengan MySQL menggunakan pendekatan relasional. Struktur tabel mengacu pada siklus akuntansi standar SAK EMKM, mencakup entitas bisnis, akun, jurnal, transaksi penjualan, hingga pengelolaan stok.",
-      erdImage: "/public/keutrack/database.png",
+      erdImage: `${import.meta.env.BASE_URL}keutrack/database.png`,
       erdImageAlt: "Entity Relationship Diagram KeuTrack",
       erdCaption: "ERD KeuTrack — Perancangan Database MySQL",
     },
 
     // HERO IMAGE
-    heroImage: "/public/keutrack/dashboard.png",
+    heroImage: `${import.meta.env.BASE_URL}keutrack/dashboard.png`,
     heroImageAlt: "Cover Aplikasi Keutrack",
 
     // ADDITIONAL GALLERY
     gallery: [
       {
-        src: "/public/keutrack/dashboard.png",
+        src: `${import.meta.env.BASE_URL}keutrack/dashboard.png`,
         alt: "Dashboard aplikasi KeuTrack",
         caption: "Dashboard",
       },
       {
-        src: "/public/keutrack/transaksi.png",
+        src: `${import.meta.env.BASE_URL}keutrack/transaksi.png`,
         alt: "Halaman transaksi aplikasi KeuTrack",
         caption: "Pencatatan Transaksi",
       },
       {
-        src: "/public/keutrack/POS.png",
+        src: `${import.meta.env.BASE_URL}keutrack/POS.png`,
         alt: "Halaman POS aplikasi KeuTrack",
         caption: "Halaman POS",
       },
       {
-        src: "/public/keutrack/siklusakuntansi.png",
+        src: `${import.meta.env.BASE_URL}keutrack/siklusakuntansi.png`,
         alt: "Halaman Siklus Akuntansi",
         caption: "Halaman Siklus Akuntansi",
       },
       {
-        src: "/public/keutrack/laporankeuangan.png",
+        src: `${import.meta.env.BASE_URL}keutrack/laporankeuangan.png`,
         alt: "Halaman Laporan Keuangan",
         caption: "Halaman Laporan Keuangan",
       },
       {
-        src: "/public/keutrack/profil.png",
+        src: `${import.meta.env.BASE_URL}keutrack/profil.png`,
         alt: "Halaman Profil",
         caption: "Halaman Profil",
       },
@@ -160,13 +160,13 @@ export const projects: ProjectData[] = [
     number: "02",
     slug: "saktiku",
     name: "Saktiku",
-    year: "Maret - November 2026",
+    year: "Feb - Nov 2026",
     // Project Card
     category: "Web App - Pencatatan Keuangan UMKM.",
     description:
       "Aplikasi akuntansi berbasis web untuk pencatatan transaksi dan penyusunan laporan keuangan UMKM.",
 
-    image: "/public/saktiku/cover.png",
+    image: `${import.meta.env.BASE_URL}saktiku/cover.png`,
     imageAlt: "Cover platform Saktiku",
 
     technologies: ["React", "Vite", "Node.js", "Express", "MySQL"],
@@ -209,33 +209,33 @@ export const projects: ProjectData[] = [
     ],
 
     //hero image
-    heroImage: "/public/saktiku/dashboard.png",
+    heroImage: `${import.meta.env.BASE_URL}saktiku/dashboard.png`,
     heroImageAlt: "Logo Saktiku",
 
     // Additional gallery
     gallery: [
       {
-        src: "/public/saktiku/dashboard.png",
+        src: `${import.meta.env.BASE_URL}saktiku/dashboard.png`,
         alt: "Dashboard aplikasi Saktiku",
         caption: "Dashboard Saktiku"
       },
       {
-        src: "/public/saktiku/setupsaldoawal.png",
+        src: `${import.meta.env.BASE_URL}saktiku/setupsaldoawal.png`,
         alt: "Setup Saldo Awal Saktiku",
         caption: "Saldo Awal",
       },
       {
-        src: "/public/saktiku/transaksi.png",
+        src: `${import.meta.env.BASE_URL}saktiku/transaksi.png`,
         alt: "Transaksi Saktiku",
         caption: "Transaksi",
       },
       {
-        src: "/public/saktiku/siklusakuntansi.png",
+        src: `${import.meta.env.BASE_URL}saktiku/siklusakuntansi.png`,
         alt: "Siklus Akuntansi Saktiku",
         caption: "Siklus Akuntansi",
       },
       {
-        src: "/public/saktiku/laporankeuangan.png",
+        src: `${import.meta.env.BASE_URL}saktiku/laporankeuangan.png`,
         alt: "Laporan keuangan Saktiku",
         caption: "Laporan Keuangan",
       },
@@ -250,12 +250,12 @@ export const projects: ProjectData[] = [
     number: "03",
     slug: "digilitera",
     name: "DigiLitera",
-    year: "Juni 2026 - Sekarang",
+    year: "Juni - Oktober 2026",
     //project card
     category: "Web App - E-Learning Platform",
     description: "Platform web learning interaktif untuk modul akademik dengan content management dan automated quiz parsing",
 
-    image: "/public/digilitera/cover.png",
+    image: `${import.meta.env.BASE_URL}digilitera/cover.png`,
     imageAlt: "Cover Platform Digilitera",
     technologies: [
       "React 18",
@@ -301,33 +301,33 @@ export const projects: ProjectData[] = [
       "Menyediakan evaluasi latihan interaktif dan transparan bagi mahasiswa.",
     ],
     //hero image
-    heroImage: "/public/digilitera/dashboardlec.png",
+    heroImage: `${import.meta.env.BASE_URL}digilitera/dashboardlec.png`,
     heroImageAlt: "Logo DigiLitera",
 
     //gallery
     gallery: [
       {
-        src: "/public/digilitera/dashboardlec.png",
+        src: `${import.meta.env.BASE_URL}digilitera/dashboardlec.png`,
         alt: "Dashboard Lecturer DigiLitera",
         caption: "Dashboard Lecturer DigiLitera",
       },
       {
-        src: "/public/digilitera/daftarmaterilec.png",
+        src: `${import.meta.env.BASE_URL}digilitera/daftarmaterilec.png`,
         alt: "Daftar Materi Lecturer DigiLitera",
         caption: "Daftar Materi Lecturer DigiLitera",
       },
       {
-        src: "/public/digilitera/daftarsoallec.png",
+        src: `${import.meta.env.BASE_URL}digilitera/daftarsoallec.png`,
         alt: "Daftar Soal Lecturer DigiLitera",
         caption: "Daftar Soal Lecturer DigiLitera",
       },
       {
-        src: "/public/digilitera/dashboardmhs.png",
+        src: `${import.meta.env.BASE_URL}digilitera/dashboardmhs.png`,
         alt: "Dashboard Mahasiswa DigiLitera",
         caption: "Dashboard Mahasiswa DigiLitera",
       },
       {
-        src: "/public/digilitera/daftarmaterimhs.png",
+        src: `${import.meta.env.BASE_URL}digilitera/daftarmaterimhs.png`,
         alt: "Daftar Materi Mahasiswa",
         caption: "Daftar Materi Mahasiswa",
       },
@@ -346,7 +346,7 @@ export const projects: ProjectData[] = [
     year: "Agustus 2025 - Januari 2026",
     category: "Web App - Absensi Karyawan",
     description: "Sistem presensi karyawan berbasis validasi Geolocation (GPS Geofencing) dan verifikasi foto kamera wajah secara real-time. ",
-    image: "/public/absensi/absensi.png",
+    image: `${import.meta.env.BASE_URL}absensi/absensi.png`,
     imageAlt: "Cover Absensi Karyawan",
     technologies: ["JavaScript (ES6+)",
       "Node.js",
@@ -380,7 +380,7 @@ export const projects: ProjectData[] = [
 
     database: {
       description: "Database Absensi Karyawan dirancang menggunakan MySQL yang menghubungkan entitas pengguna, riwayat absensi, dan konfigurasi kantor. Tabel attendance menyimpan koordinat lintang/bujur (latitude & longitude), foto kehadiran, waktu masuk dan pulang, hingga kalkulasi menit keterlambatan secara presisi.",
-      erdImage: "/public/absensi/database.png",
+      erdImage: `${import.meta.env.BASE_URL}absensi/database.png`,
       erdImageAlt: "Entity Relationship Diagram Absensi Karyawan",
       erdCaption: "ERD Absensi Karyawan — Skema Database Absensi Karyawan",
     },
@@ -390,17 +390,17 @@ export const projects: ProjectData[] = [
 
     gallery: [
       {
-        src: "/public/absensi/dashboardkrywn.png",
+        src: `${import.meta.env.BASE_URL}absensi/dashboardkrywn.png`,
         alt: "Dashboard Absensi Karyawan",
         caption: "Dashboard Absensi Karyawan",
       },
       {
-        src: "/public/absensi/dashboardadm.png",
+        src: `${import.meta.env.BASE_URL}absensi/dashboardadm.png`,
         alt: "Halaman Admin",
         caption: "Halaman Admin",
       },
       {
-        src: "/public/absensi/absensi.png",
+        src: `${import.meta.env.BASE_URL}absensi/absensi.png`,
         alt: "Absensi Karyawan",
         caption: "Absensi Karyawan",
       },
@@ -417,7 +417,7 @@ export const projects: ProjectData[] = [
     year: "2026",
     category: "Web App — Audit Risk Decision Support System",
     description: "Decision Support System (DSS) berbasis OCR dan NLP Bahasa Indonesia untuk mendeteksi indikasi risiko Triple Earnings Management dari laporan auditor independen.",
-    image: "/public/kamtridetect/overviewaudit.png",
+    image: `${import.meta.env.BASE_URL}kamtridetect/overviewaudit.png`,
     imageAlt: "Overview KAM-TriDetect",
     technologies: [
       "Python",
@@ -456,16 +456,16 @@ export const projects: ProjectData[] = [
       "Menyediakan penilaian risiko berbasis bukti kuantitatif dan visualisasi dimensi yang mudah dipahami oleh auditor maupun analis.",
     ],
 
-    heroImage: "/public/kamtridetect/overviewaudit.png",
+    heroImage: `${import.meta.env.BASE_URL}kamtridetect/overviewaudit.png`,
     heroImageAlt: "Overview KAM-TriDetect",
     gallery: [
       {
-        src: "/public/kamtridetect/analisisbaru.png",
+        src: `${import.meta.env.BASE_URL}kamtridetect/analisisbaru.png`,
         alt: "Dashboard Analisis Risiko KAM-TriDetect",
         caption: "Dashboard Analisis Risiko & Visualisasi Skor",
       },
       {
-        src: "/public/kamtridetect/riwayatanalisis.png",
+        src: `${import.meta.env.BASE_URL}kamtridetect/riwayatanalisis.png`,
         alt: "Halaman Unggah Berkas Laporan Keuangan",
         caption: "Upload Dokumen & Background Job Processing",
       },

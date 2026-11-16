@@ -42,7 +42,7 @@ function Portrait() {
       <div className="portrait-frame">
         <img
           className="portrait"
-          src="/Photo.png"
+          src={`${import.meta.env.BASE_URL}Photo.png`}
           alt="Portrait of M Gauz Rofiqul Azhiem"
           width={884}
           height={1250}
@@ -202,10 +202,10 @@ export default function AboutSection() {
             >
               <a
                 className="about-action about-action-primary"
-                href="/CV.pdf"
-                download
+                href={`${import.meta.env.BASE_URL}Resume%20mgauzra.pdf`}
+                download="Resume-M-Gauz-Rofiqul-Azhiem.pdf"
               >
-                Unduh CV <span aria-hidden="true">↗</span>
+                Unduh RESUME <span aria-hidden="true">↗</span>
               </a>
 
               <a
