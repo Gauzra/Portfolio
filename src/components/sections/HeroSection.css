@@ -218,6 +218,11 @@
 }
 
 @media (max-width: 680px) {
+  .hero {
+    min-height: auto;
+    padding: 76px 0 24px;
+  }
+
   .hero-content {
     width: calc(100% - 36px);
     min-height: auto;
@@ -225,13 +230,9 @@
     flex-direction: column;
   }
 
-  .hero {
-    padding-top: 70px;
-  }
-
   .intro-column {
     width: 100%;
-    padding: 38px 0 20px;
+    padding: 24px 0 12px;
   }
 
   .hero h1,
@@ -249,8 +250,12 @@
 
   .summary {
     max-width: 520px;
-    margin-top: 20px;
+    margin-top: 16px;
     line-height: 1.75;
+  }
+
+  .hero-tech-stack {
+    margin: 18px auto 0;
   }
 
   .hero-actions {
@@ -266,6 +271,14 @@
 }
 
 @media (max-width: 390px) {
+  .hero {
+    padding: 70px 0 20px;
+  }
+
+  .intro-column {
+    padding: 16px 0 8px;
+  }
+
   .hero-content {
     width: calc(100% - 28px);
   }
