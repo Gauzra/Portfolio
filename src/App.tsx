@@ -14,6 +14,7 @@ function ScrollHandler() {
           target.scrollIntoView({ behavior: "smooth" })
         }
       }, 50)
+
       return () => window.clearTimeout(timer)
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" })
@@ -25,7 +26,7 @@ function ScrollHandler() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Portfolio">
       <ScrollHandler />
       <SiteHeader />
       <AppRoutes />

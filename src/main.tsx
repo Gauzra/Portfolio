@@ -21,8 +21,9 @@ const DISPLAY_MS = 2500
 const EXIT_MS = 520
 const FONT_TIMEOUT_MS = 1500
 
-const isProjectPage = window.location.pathname.startsWith("/projects")
-
+const isProjectPage = window.location.pathname.startsWith(
+  `${import.meta.env.BASE_URL}projects`,
+)
 async function startOpening() {
   if (!splash) return
 
